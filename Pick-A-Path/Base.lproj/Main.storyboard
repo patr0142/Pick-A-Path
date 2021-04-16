@@ -1,24 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oXo-li-FtR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Page B-->
+        <scene sceneID="qPu-Fr-IFD">
+            <objects>
+                <viewController title="Page B" id="Oip-hK-jX0" customClass="Page2ViewController" customModule="Pick_A_Path" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I3C-FF-xu5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-wI-N0V">
+                                <rect key="frame" x="20" y="88" width="374" height="192"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="C4C-ud-wre"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VtM-wI-N0V" firstAttribute="leading" secondItem="sEu-ri-hwU" secondAttribute="leading" constant="20" id="243-Ya-0fE"/>
+                            <constraint firstItem="sEu-ri-hwU" firstAttribute="trailing" secondItem="VtM-wI-N0V" secondAttribute="trailing" constant="20" id="39d-3l-fH7"/>
+                            <constraint firstItem="sEu-ri-hwU" firstAttribute="bottom" secondItem="VtM-wI-N0V" secondAttribute="bottom" constant="582" id="f0V-8s-t3R"/>
+                            <constraint firstItem="VtM-wI-N0V" firstAttribute="top" secondItem="sEu-ri-hwU" secondAttribute="top" id="sFh-NU-Abf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sEu-ri-hwU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="FVc-jE-pzf">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="X32-Ta-4sn">
+                            <connections>
+                                <action selector="pageBOptionAClick:" destination="Oip-hK-jX0" id="XFx-4o-z2f"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="vEO-IS-NaA">
+                            <connections>
+                                <action selector="pageBOptionBClick:" destination="Oip-hK-jX0" id="Jtb-7q-rZh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageBNumber" destination="FVc-jE-pzf" id="uIJ-kQ-yBF"/>
+                        <outlet property="pageBOptionA" destination="X32-Ta-4sn" id="wdr-Yk-VLX"/>
+                        <outlet property="pageBOptionB" destination="vEO-IS-NaA" id="Ryi-4g-88Q"/>
+                        <outlet property="pageBText" destination="VtM-wI-N0V" id="rwR-YZ-SSe"/>
+                        <segue destination="h8v-NC-hRB" kind="show" identifier="showPageC" id="ry4-id-1di"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MID-bf-Qce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711.5942028985507" y="600"/>
+        </scene>
+        <!--Page C-->
+        <scene sceneID="KDh-mg-Ubx">
+            <objects>
+                <viewController title="Page C" id="h8v-NC-hRB" customClass="Page3ViewController" customModule="Pick_A_Path" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4TR-10-gKU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fb9-I6-9FK">
+                                <rect key="frame" x="20" y="81" width="374" height="192"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="XeZ-Rl-az6"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fb9-I6-9FK" firstAttribute="leading" secondItem="DW1-j2-Shh" secondAttribute="leading" constant="20" id="0oa-lA-oHl"/>
+                            <constraint firstItem="DW1-j2-Shh" firstAttribute="top" secondItem="Fb9-I6-9FK" secondAttribute="top" constant="7" id="dJt-pk-wrI"/>
+                            <constraint firstItem="DW1-j2-Shh" firstAttribute="bottom" secondItem="Fb9-I6-9FK" secondAttribute="bottom" constant="589" id="ohY-cD-coZ"/>
+                            <constraint firstItem="DW1-j2-Shh" firstAttribute="trailing" secondItem="Fb9-I6-9FK" secondAttribute="trailing" constant="20" id="s83-SB-G4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DW1-j2-Shh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="z4a-f5-b3T">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="9Be-Pz-WMm">
+                            <connections>
+                                <action selector="startOver:" destination="h8v-NC-hRB" id="mx7-Yj-5Xo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageCNumber" destination="z4a-f5-b3T" id="K9M-x6-CaQ"/>
+                        <outlet property="pageCOptionA" destination="9Be-Pz-WMm" id="C4L-au-wSN"/>
+                        <outlet property="pageCText" destination="Fb9-I6-9FK" id="lcY-7S-AWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NC9-cd-YhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437.68115942029" y="600"/>
+        </scene>
+        <!--Page A-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page A" title="Page A" id="BYZ-38-t0r" customClass="ViewController" customModule="Pick_A_Path" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Zo-wS-gmk">
+                                <rect key="frame" x="20" y="88" width="374" height="188"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="aZv-Z0-d5M"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Zo-wS-gmk" secondAttribute="trailing" constant="20" id="T2R-BV-zkh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Zo-wS-gmk" secondAttribute="bottom" constant="586" id="VtL-ls-2FN"/>
+                            <constraint firstItem="6Zo-wS-gmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ywz-Ca-aOa"/>
+                            <constraint firstItem="6Zo-wS-gmk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="llC-xQ-D33"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="eA5-hH-WCq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="VUK-tp-ej0">
+                            <connections>
+                                <action selector="OptionAClick:" destination="BYZ-38-t0r" id="6jX-gl-hlT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="NjC-Iw-9MI">
+                            <connections>
+                                <action selector="OptionBClick:" destination="BYZ-38-t0r" id="HsQ-4N-CSb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="OptionA" destination="VUK-tp-ej0" id="meJ-zC-44t"/>
+                        <outlet property="OptionB" destination="NjC-Iw-9MI" id="R00-p4-6H0"/>
+                        <outlet property="PageAText" destination="6Zo-wS-gmk" id="UWh-l6-xGX"/>
+                        <outlet property="pageANumber" destination="eA5-hH-WCq" id="2Zn-e4-UUG"/>
+                        <segue destination="Oip-hK-jX0" kind="show" identifier="showPageB" id="Y6x-Lx-gEI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="927.536231884058" y="600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wlj-57-TmJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oXo-li-FtR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tyt-8p-Hy2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="icP-V9-ll7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lH3-mi-VLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="601"/>
         </scene>
     </scenes>
 </document>
